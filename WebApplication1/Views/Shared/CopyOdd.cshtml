@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="de">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    @System.Web.Optimization.Scripts.Render("~/bundles/bootstrap")
+    @System.Web.Optimization.Styles.Render("~/bundles/css")
+    @RenderSection("head", false)
+</head>
+<body>
+    <div id="userSettings">
+        @Html.Partial("_UserSettings")
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+
+
+    @System.Web.Optimization.Scripts.Render("~/bundles/default")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
